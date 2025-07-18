@@ -17,8 +17,8 @@ No GUI. No distractions. Just pure, unfiltered terminal music madness.
 ### 🛠️ Setup
 Clone the repo and install dependencies:
 ```bash
-git clone https://github.com/yourusername/singterm.git
-cd singterm
+git clone https://github.com/VarunSaiCSE/terminal-but-karaoke.git
+cd terminal-but-karaoke
 pip install -r requirements.txt
 ```
 

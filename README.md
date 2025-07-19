@@ -1,89 +1,140 @@
-# terminal-but-karaoke
+# Terminal but Karaoke 🎤
 
-Ever wished your terminal could sing?  
-Now it can. Welcome to **my repo** — your command-line karaoke machine.
+A fun, hackable terminal karaoke machine that syncs lyrics with your music and adds ASCII art and color to your shell!
 
-It plays your favorite tracks, syncs the lyrics, and drops ASCII goodness like a rockstar.  
-No GUI. No distractions. Just pure, unfiltered terminal music madness.
+## 📦 Table of Contents
 
----
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Requirements](#requirements)
+4. [Setup \& Installation](#setup--installation)
+5. [Usage Instructions](#usage-instructions)
+6. [Adding Your Own Songs](#adding-your-own-songs)
+7. [Troubleshooting](#troubleshooting)
+8. [Project Structure](#project-structure)
+9. [Credits](#credits)
 
-## 🚀 Getting Started
+## 🧑‍💻 Overview
 
-### ⚙️ Requirements
-- Python 3.8+
-- `pygame`, `rich` (installed automatically)
-
-### 🛠️ Setup
-Clone the repo and install dependencies:
-```bash
-git clone https://github.com/VarunSaiCSE/terminal-but-karaoke.git
-cd terminal-but-karaoke
-pip install -r requirements.txt
-```
-
-
-### 🎶 Play That Track
-```bash
-python3 karaoke_cli.py song.mp3 song.lrc
-```
-
-Includes a sample track and synced .lrc lyrics.
-
-Want your own song? Drop an .mp3 and .lrc file into the folder — done.
-
-✋ Stop the Show
-
-Press Ctrl + C anytime. But why would you?
+This project transforms your terminal into a karaoke machine powered by Python. It plays your chosen song, shows a vibrant ASCII banner, and synchronizes lyrics in real-time—all in the command line. Great for hackathons, demos, or just singing for fun!
 
 ## ✨ Features
 
-### 🎵 Synchronized lyrics — like a live concert in your terminal
-### 🌈 Colorful ASCII banner at launch (hello 80s)
-### ⚡ Powered by Python, rich, and pygame
-### 🧠 One file. One command. Infinite drama.
-### 💻 Works on macOS, Linux, and WSL
-### 🎬 Demo
-
-(Imagine lyrics scrolling, music playing, and you absolutely crushing it.)
-
-## 📁 Project Structure
-
-File	Purpose
-
-### karaoke_cli.py	#Main karaoke script
-
-### song.mp3	#Sample music file
-
-### song.lrc	#Sample synced lyrics
-
-### requirements.txt	#All dependencies listed
+- Plays mp3 (or wav) audio in the terminal
+- Displays lyrics in sync using `.lrc` lyric files
+- Fun and customizable ASCII art banners
+- Colorful and animated terminal experience
+- Easy setup and portable code
 
 
-🧪 Minimal setup. Clone & run in <1 minute.
+## 🛠 Requirements
 
-📚 Fully documented and readable.
+- **Python 3.x** (most macOS/Linux systems have this pre-installed)
+- Python packages: `pygame`, `rich`
 
-🛠️ Built on pure Python. No fluff.
 
-🤘 Looks amazing. Sounds amazing. Feels... wild.
+## 🚀 Setup \& Installation
 
-🛣️ Roadmap
+Clone this repository or download the project files, then open your terminal and follow these steps:
 
- Add real-time lyrics from YouTube or Genius API
- 
- Add beat detection + lyric bounce animations
- 
- Multiple themes (VHS? Matrix? Cowboy Bebop?)
- 
- Multiplayer mode over SSH (duet with your roommate)
- 
-## 📜 License
+### 1. Go to the Project Directory
 
-MIT License — do whatever you want, just don’t sue me for your neighbor’s noise complaints.
+Move into the folder where this README and the code/script live:
 
-## 🔗 Credits
+```sh
+cd /path/to/karaoke-cli
+```
 
-Created for "For the Love of Code", powered by too much caffeine and questionable musical taste.
+*(You can also type `cd `, then drag and drop the folder onto your terminal window.)*
 
-“Your terminal is your stage. Don’t waste it.”
+### 2. Install Dependencies
+
+If you see a `requirements.txt` file, run:
+
+```sh
+pip3 install -r requirements.txt
+```
+
+Or install packages individually:
+
+```sh
+pip3 install pygame rich
+```
+
+
+## 🎵 Usage Instructions
+
+### 1. Make Sure You Have:
+
+- The main script: `karaoke_cli.py`
+- At least one `.mp3` music file (e.g., `song.mp3`)
+- A matching `.lrc` lyric file (e.g., `song.lrc`)
+
+All files should be in the **same folder**.
+
+### 2. Run the Karaoke Script
+
+Replace `song.mp3` and `song.lrc` with your file names as needed:
+
+```sh
+python3 karaoke_cli.py song.mp3 song.lrc
+```
+
+- The banner will appear
+- After a short countdown, your song will play and lyrics will start scrolling
+- **Press `Ctrl + C` at any time to stop**
+
+
+## 🎶 Adding Your Own Songs
+
+1. **Get an audio file:**
+Use any `.mp3` or `.wav` file you own or have rights to.
+2. **Find or create a matching `.lrc` file:**
+`.lrc` files have time-stamped lyrics lines. Example:
+
+```
+[00:05.00]Twinkle, twinkle, little star
+[00:10.00]How I wonder what you are
+```
+
+3. **Place both your audio file and its `.lrc` in the project folder.**
+4. **Run:**
+
+```sh
+python3 karaoke_cli.py your_song.mp3 your_song.lrc
+```
+
+
+## 🧩 Troubleshooting
+
+- **No output?**
+    - Make sure you are calling the script with both the audio and lyrics filenames as arguments.
+- **File not found?**
+    - Double-check spelling and file extensions.
+    - Files must be in the current directory.
+- **Dependencies missing?**
+    - Rerun: `pip3 install pygame rich`
+- **Lyrics out of sync?**
+    - Verify your `.lrc` timestamps match the actual song.
+
+
+## 📂 Project Structure
+
+```
+karaoke-cli/
+├── karaoke_cli.py         # Main karaoke script
+├── song.mp3               # Sample audio (replace with your own)
+├── song.lrc               # Sample lyrics file (replace with your own)
+├── requirements.txt       # Python dependencies
+├── README.md              # This documentation
+└── .gitignore             # Standard git ignore file
+```
+
+
+## 👥 Credits
+
+Written by Varun Sai Andra, For the Love of Code, 19 July 2025.
+
+> Enjoy your terminal karaoke session! PRs and forks welcome.
+> For questions, raise an issue or reach out!
+> andra.varunsai@gmail.com

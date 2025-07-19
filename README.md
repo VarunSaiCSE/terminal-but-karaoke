@@ -135,6 +135,8 @@ karaoke-cli/
 
 Written by Varun Sai Andra, For the Love of Code, 19 July 2025.
 
+#fortheloveofcode
+
 > Enjoy your terminal karaoke session! PRs and forks welcome.
 > For questions, raise an issue or reach out!
 > andra.varunsai@gmail.com
